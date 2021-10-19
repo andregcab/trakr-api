@@ -15,6 +15,8 @@ gem 'puma', '~> 5.0'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'graphiql-rails'
+gem 'graphql', '~> 1.10', '>= 1.10.5'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -23,18 +25,31 @@ gem 'puma', '~> 5.0'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem 'rack-cors'
+gem 'rack-cors'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'graphiql-rails'
 end
 
 group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  gem 'web-console', '>= 3.3.0'
 end
+
+gem 'listen', '~> 3.3'
+# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+gem 'capistrano', '~> 3.10', require: false
+gem 'capistrano-rails', '~> 1.5', require: false
+gem 'capistrano-rbenv', '~> 2.1'
+gem 'capistrano-db-tasks', require: false
+gem 'spring-watcher-listen', '~> 2.0.0'
+gem 'spring'
+
+gem 'ed25519', '>= 1.2', '< 2.0'
+gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
