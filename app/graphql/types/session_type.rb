@@ -10,7 +10,7 @@ module Types
     field :activities, [Types::ActivityType], null: true
 
     def activities 
-      Activities.where(session_id: object.id)
+      Activity.where(session_id: object.id)
     end
   end
 end

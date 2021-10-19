@@ -4,7 +4,7 @@ module Types
       description "Arguments for creating an activity nested under a session"
 
       argument :session_id, ID, required: false
-      argument :activity_type, Enums::ActivityEnums::ActivityTypesEnum, required: true
+      argument :activity_type, Enums::ActivityEnums::ActivityTypesEnum, required: false
       argument :eng_name, String, required: false
       argument :charge_code, String, required: false
       argument :client_name, String, required: false

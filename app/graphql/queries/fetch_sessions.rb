@@ -1,11 +1,11 @@
 module Queries
   class FetchSessions < Queries::BaseQuery
-
     type [Types::SessionType], null: false
-    argument :session_id, String, required: true
+    
+    argument :user_id, String, required: true
 
-    def resolve(session_id:)
-      Session.find(session_id)
+    def resolve(user_id:)
+      Session.where(user_id: user_id)
     end
   end
 end
