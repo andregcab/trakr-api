@@ -1,7 +1,7 @@
 module Types
   class MutationType < Types::BaseObject
     include Resolvers::Mutations::Sessions
-    # include Resolvers::Mutations::UpdateSession
+    include Resolvers::Mutations::Users
   end
 end
 
