@@ -3,7 +3,7 @@ module CustomTypes
     description "An Activity"
 
     field :id, ID, null: false
-    field :activity_type, Integer, null: true
+    field :activity_type, Enums::ActivityEnums::ActivityTypesEnum, null: true
     field :eng_name, String, null: true
     field :charge_code, String, null: true
     field :client_name, String, null: true
