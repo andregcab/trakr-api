@@ -1,5 +1,7 @@
-module Types
+module CustomTypes
   class ActivityType < Types::BaseObject
+    description "An Activity"
+
     field :id, ID, null: false
     field :activity_type, Integer, null: true
     field :eng_name, String, null: true
