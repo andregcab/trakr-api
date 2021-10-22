@@ -4,7 +4,7 @@ module Types
     include GraphQL::Types::Relay::HasNodeField
     include GraphQL::Types::Relay::HasNodesField
 
-    field :fetch_user, resolver: Queries::FetchUser
-    field :fetch_sessions, resolver: Queries::FetchSessions
+    include Resolvers::Queries::Sessions
+    include Resolvers::Queries::Users
   end
 end

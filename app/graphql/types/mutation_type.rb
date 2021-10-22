@@ -1,6 +1,7 @@
 module Types
   class MutationType < Types::BaseObject
-    field :create_session, mutation: Mutations::CreateSession
+    include Resolvers::Mutations::Sessions
+    include Resolvers::Mutations::Users
   end
 end
 
