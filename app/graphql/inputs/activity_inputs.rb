@@ -14,7 +14,7 @@ module Inputs
     class UpdateActivityInput < Types::BaseInputObject
       description "Arguments for updating an activity"
 
-      argument :id, ID, required: true
+      argument :id, ID, required: false
       argument :activity_type, Enums::ActivityEnums::ActivityTypesEnum, required: false
       argument :eng_name, String, required: false
       argument :charge_code, String, required: false
