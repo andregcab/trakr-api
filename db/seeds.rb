@@ -9,15 +9,18 @@
 
 users = [
     {
-        name: "jose arjona",
+        first_name: "jose",
+        last_name: "arjona",
         email: "jarjona@kaufmanrossin.com"
     },
     {
-        name: "andre cabrera",
+        first_name: "andre",
+        last_name: "cabrera",
         email: "acabrera@kaufmanrossin.com"
     },
     {
-        name: "shrekard swampington",
+        first_name: "shrekard",
+        last_name: "swampington",
         email: "shrek@swamp.com"
     }
 ]

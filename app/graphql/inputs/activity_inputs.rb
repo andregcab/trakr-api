@@ -4,7 +4,7 @@ module Inputs
       description "Arguments for creating an activity"
 
       argument :session_id, ID, required: false
-      argument :activity_type, Enums::ActivityEnums::ActivityTypesEnum, required: false
+      argument :activity_type, Enums::ActivityEnums::ActivityTypesEnum, required: true
       argument :eng_name, String, required: false
       argument :charge_code, String, required: false
       argument :client_name, String, required: false

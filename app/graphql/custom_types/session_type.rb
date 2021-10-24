@@ -9,10 +9,6 @@ module CustomTypes
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
     field :user_id, Integer, null: false
-    field :activities, [CustomTypes::ActivityType], null: true
-
-    def activities 
-      Activity.where(session_id: object.id)
-    end
+    field :activity, CustomTypes::ActivityType, null: true
   end
 end

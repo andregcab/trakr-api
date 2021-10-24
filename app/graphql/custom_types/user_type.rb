@@ -3,7 +3,8 @@ module CustomTypes
     description "A User"
 
     field :id, ID, null: false
-    field :name, String, null: true
+    field :first_name, String, null: true
+    field :last_name, String, null: true
     field :email, String, null: true
     field :uuid, String, null: true
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
