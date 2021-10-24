@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_17_231342) do
+ActiveRecord::Schema.define(version: 2021_10_17_230926) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "activities", force: :cascade do |t|
-    t.integer "activity_type"
+    t.integer "activity_type", null: false
     t.string "eng_name"
     t.string "charge_code"
     t.string "client_name"
@@ -30,8 +30,8 @@ ActiveRecord::Schema.define(version: 2021_10_17_231342) do
 
   create_table "sessions", force: :cascade do |t|
     t.datetime "last_started"
-    t.integer "elapsed_time"
-    t.boolean "in_session"
+    t.integer "elapsed_time", default: 0, null: false
+    t.boolean "in_session", default: false, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
@@ -39,11 +39,13 @@ ActiveRecord::Schema.define(version: 2021_10_17_231342) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
+    t.string "email", null: false
     t.string "uuid"
+    t.string "first_name", null: false
+    t.string "last_name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
   add_foreign_key "activities", "sessions"
