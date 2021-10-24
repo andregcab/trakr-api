@@ -8,9 +8,9 @@ module Inputs
       argument :in_session, Boolean, required: false
       argument :elapsed_time, Integer, required: false
       argument :last_started, GraphQL::Types::ISO8601DateTime, required: false
-      argument :activities_attributes,
-      [Inputs::ActivityInputs::CreateActivityInput],
-      required: false
+      argument :activity_attributes,
+      Inputs::ActivityInputs::CreateActivityInput,
+      required: true
     end
     
     class UpdateSessionInput < Types::BaseInputObject
@@ -19,7 +19,7 @@ module Inputs
       argument :in_session, Boolean, required: false
       argument :elapsed_time, Integer, required: false
       argument :last_started, GraphQL::Types::ISO8601DateTime, required: false
-      argument :activities_attributes, [Inputs::ActivityInputs::UpdateActivityInput], required: false
+      argument :activity_attributes, Inputs::ActivityInputs::UpdateActivityInput, required: false
     end
     
     class SessionWhereInput < Types::BaseInputObject
