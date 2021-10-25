@@ -11,6 +11,7 @@ set ssh_options: {
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+set :rvm_map_bins, %w{gem rake ruby rails bundle}
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, -> { "/home/#{fetch(:user)}/apps/#{fetch(:application)}" }
