@@ -14,5 +14,6 @@ test:
 production:
   <<: *default
   database: trackr_api_production
-  username: trackr_api
-  password: <%= Rails.application.credentials[Rails.env.to_sym][:db_password] %>
+  username: <%= Credentials.get :db, :username %>
+  password: <%= Credentials.get :db, :password %>
+  host: <%= Credentials.get :db, :host %>

@@ -15,7 +15,6 @@ gem 'puma', '~> 5.0'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'graphiql-rails'
 gem 'graphql', '~> 1.10', '>= 1.10.5'
 
 # Use Active Storage variant
@@ -37,13 +36,15 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'web-console', '>= 3.3.0'
+    gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-gem 'listen', '~> 3.3'
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'capistrano', '~> 3.10', require: false
-gem 'capistrano-rails', '~> 1.5', require: false
-gem 'capistrano-rbenv', '~> 2.1'
+gem 'capistrano-rails', require: false
+gem 'capistrano-rbenv'
+gem 'capistrano3-puma', require: false
+gem 'capistrano-rvm', require: false
 gem 'capistrano-db-tasks', require: false
 gem 'spring-watcher-listen', '~> 2.0.0'
 gem 'spring'

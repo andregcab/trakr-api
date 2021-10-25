@@ -1,5 +1,7 @@
-module Types
+module CustomTypes
   class SessionType < Types::BaseObject
+    description "A Session"
+
     field :id, ID, null: false
     field :last_started, GraphQL::Types::ISO8601DateTime, null: true
     field :elapsed_time, Integer, null: true
@@ -7,10 +9,6 @@ module Types
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
     field :user_id, Integer, null: false
-    field :activities, [Types::ActivityType], null: true
-
-    def activities 
-      Activities.where(session_id: object.id)
-    end
+    field :activity, CustomTypes::ActivityType, null: true
   end
 end
