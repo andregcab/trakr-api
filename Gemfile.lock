@@ -86,10 +86,10 @@ GEM
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
-    capistrano3-puma (5.2.0)
+    capistrano3-puma (4.0.0)
       capistrano (~> 3.7)
       capistrano-bundler
-      puma (>= 4.0, < 6.0)
+      puma (~> 4.0)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
     ed25519 (1.2.4)
@@ -125,7 +125,7 @@ GEM
       mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
     pg (1.2.3)
-    puma (5.5.2)
+    puma (4.3.10)
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
@@ -197,18 +197,18 @@ DEPENDENCIES
   bcrypt_pbkdf (>= 1.0, < 2.0)
   bootsnap (>= 1.4.4)
   byebug
-  capistrano (~> 3.10)
+  capistrano (~> 3.14, >= 3.14.1)
   capistrano-db-tasks
-  capistrano-rails
+  capistrano-rails (~> 1.6, >= 1.6.1)
   capistrano-rbenv
-  capistrano-rvm
-  capistrano3-puma
+  capistrano-rvm (~> 0.1.2)
+  capistrano3-puma (~> 4.0)
   ed25519 (>= 1.2, < 2.0)
   graphiql-rails
   graphql (~> 1.10, >= 1.10.5)
   listen (~> 3.3)
   pg (~> 1.1)
-  puma (~> 5.0)
+  puma (~> 4.1)
   rack-cors
   rails (~> 6.1.4, >= 6.1.4.1)
   spring
