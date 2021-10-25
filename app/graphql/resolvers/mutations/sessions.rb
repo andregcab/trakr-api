@@ -12,10 +12,19 @@ module Resolvers
           argument :id, ID, required: true
           argument :data, Inputs::SessionInputs::UpdateSessionInput, required: true
         end
+
+        base.field :delete_session, CustomTypes::SessionType, null: false do
+          argument :id, ID, required: true
+        end
       end
 
       def create_session(data:)
         Session.create!(data)
+      end
+
+      def delete_session(id:)
+        session = Session.find(id)
+        session.destroy!
       end
 
       def update_session_and_activity(id:, data:)

@@ -10,7 +10,7 @@ module Resolvers
       end
 
       def sessions(where: {})
-        Session.where(where)
+        Session.where(where).order(created_at: :desc)
       end
     end
   end
