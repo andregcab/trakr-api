@@ -1,7 +1,6 @@
 set :branch, "master"
 set :rails_env, :production
 set :user, "ubuntu"
-set :rvm_custom_path, "/rvm/bin/rvm"
 
 server '3.141.107.189', user: fetch(:user), roles: %w(app db web), primary: true
 
