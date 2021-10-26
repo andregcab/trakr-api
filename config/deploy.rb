@@ -22,7 +22,6 @@ set :copy_exclude, ['.git']
 set :linked_dirs, %w(log)
 append :linked_files, "config/master.key"
 
-
 # puma
 set :puma_preload_app, true
 set :puma_init_active_record, true
