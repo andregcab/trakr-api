@@ -2,7 +2,7 @@ set :branch, "master"
 set :rails_env, :production
 set :user, "ubuntu"
 
-server '3.141.107.189', user: fetch(:user), roles: %w(app db web), primary: true
+server '3.145.13.105', user: fetch(:user), roles: %w(app db web), primary: true
 
 
 # server-based syntax
