@@ -6,14 +6,9 @@ default: &default
 development:
   <<: *default
   database: trackr_api_development
+  username: <%= ENV['DB_USERNAME'] || Rails.application.credentials[Rails.env.to_sym][:db][:username] %>
+  password: <%= ENV['DB_PASSWORD'] || Rails.application.credentials[Rails.env.to_sym][:db][:password] %>
 
 test:
   <<: *default
   database: trackr_api_test
-
-production:
-  <<: *default
-  database: trackr_api_production
-  username: <%= Credentials.get :db, :username %>
-  password: <%= Credentials.get :db, :password %>
-  host: <%= Credentials.get :db, :host %>
