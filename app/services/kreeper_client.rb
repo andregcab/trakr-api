@@ -1,7 +1,7 @@
-# require "graphql/client"
-# require "graphql/client/http"
-# class KreeperClient
-#   # adapter
+require "graphql/client"
+require "graphql/client/http"
+class KreeperClient
+  # adapter
 #   KREEPER_API_URL = Rails.application.credentials[Rails.env.to_sym][:kreeper][:graphql_url]
 #   Adapter = GraphQL::Client::HTTP.new(KREEPER_API_URL) do
 #     def headers(_context)
@@ -32,4 +32,4 @@
 #   def self.underscore_key(k)
 #     k.to_s.underscore.to_sym
 #   end
-# end
+end
