@@ -6,5 +6,6 @@ module Types
 
     include Resolvers::Queries::Sessions
     include Resolvers::Queries::Users
+    include Resolvers::Queries::Clients
   end
 end
